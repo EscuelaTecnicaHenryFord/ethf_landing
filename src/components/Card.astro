@@ -3,20 +3,24 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	picture?: string;
+	targetBlank?: boolean;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, picture, targetBlank } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
+<li class="link-card" style={"background-image: url('"+picture+"');"}>
+	<a href={href} target={targetBlank ? '_blank': undefined}>
+		<div>
+			<h2>
+				{title}
+				<span>&rarr;</span>
+			</h2>
+			<p>
+				{body}
+			</p>
+		</div>
 	</a>
 </li>
 <style>
@@ -24,24 +28,34 @@ const { href, title, body } = Astro.props;
 		list-style: none;
 		display: flex;
 		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
 		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		background-size: cover;
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+		height: 213px;
+		position: relative;
+		overflow: hidden;
+		background-position: center center;
 	}
 
 	.link-card > a {
-		width: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		text-decoration: none;
+	}
+
+	.link-card > a > div {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
+		padding: 0.5rem 1rem;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 	h2 {
 		margin: 0;
@@ -49,15 +63,14 @@ const { href, title, body } = Astro.props;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	p {
-		margin-top: 0.5rem;
+		margin-top: 0.1rem;
 		margin-bottom: 0;
-		color: #444;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent));
+	}
+	.link-card:is(:hover, :focus-within) p {
 		color: rgb(var(--accent));
 	}
 </style>
