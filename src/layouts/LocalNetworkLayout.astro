@@ -2,7 +2,11 @@
 import Card from "../components/Card.astro";
 import Land from "./Land.astro";
 
-const ip = Astro.clientAddress;
+const nativeIp = Astro.clientAddress;
+
+const addr = Astro.request.headers.get('X-Forwarded-For')
+
+const ip = nativeIp ?? addr
 
 let isLocal = false;
 
