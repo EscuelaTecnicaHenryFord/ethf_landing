@@ -10,11 +10,11 @@ const ip = nativeIp ?? addr
 
 let isLocal = false;
 
-if (ip.startsWith("10.") || ip.startsWith("127.") || ip.startsWith("192")) {
+if (ip.startsWith("10.") || ip.startsWith("127.") || ip.startsWith("192") || ip.startsWith("172")) {
   isLocal = true;
 }
 
-console.log("ip:", ip, "isLocal:", isLocal);
+console.log("native ip:", addr, "forwarded ip:", nativeIp, "isLocal:", isLocal);
 
 ---
 
