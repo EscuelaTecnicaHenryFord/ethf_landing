@@ -6,7 +6,7 @@ const nativeIp = Astro.clientAddress;
 
 const addr = Astro.request.headers.get('X-Forwarded-For')
 
-const ip = nativeIp ?? addr
+const ip = addr ?? nativeIp
 
 let isLocal = false;
 
@@ -14,7 +14,7 @@ if (ip.startsWith("10.") || ip.startsWith("127.") || ip.startsWith("192") || ip.
   isLocal = true;
 }
 
-console.log("current ip:", ip, "native ip:", addr, "forwarded ip:", nativeIp, "isLocal:", isLocal);
+console.log("current ip:", ip, "native ip:", nativeIp, "forwarded ip:", addr, "isLocal:", isLocal);
 
 ---
 
