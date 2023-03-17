@@ -9,6 +9,9 @@ let isLocal = false;
 if (ip.startsWith("10.") || ip.startsWith("127.") || ip.startsWith("192")) {
   isLocal = true;
 }
+
+console.log("ip:", ip, "isLocal:", isLocal);
+
 ---
 
 {isLocal ? <slot /> : <Land>
