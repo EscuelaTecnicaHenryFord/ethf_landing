@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -10,4 +10,4 @@ COPY . .
 
 RUN npm run build
 
-COPY ./nginx.conf /etc/nginx/nginx.conf
+CMD ["npm", "run", "start"]

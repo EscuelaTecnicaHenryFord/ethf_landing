@@ -1,0 +1,24 @@
+---
+import Card from "../components/Card.astro";
+import Land from "./Land.astro";
+
+const ip = Astro.clientAddress;
+
+let isLocal = false;
+
+if (ip.startsWith("10.") || ip.startsWith("127.") || ip.startsWith("192")) {
+  isLocal = true;
+}
+---
+
+{isLocal ? <slot /> : <Land>
+        <span slot="title">No accesible</span>
+        <span slot="instructions">Solo se puede acceder desde una computadora de la escuela.</span>
+        <Card
+            href="https://www.henryford.edu.ar/"
+            title="Página web pública"
+            body=""
+            picture="https://cms.henryford.edu.ar/uploads/Web_page_0f6b618cda.JPG?updated_at=2023-03-17T16:21:40.087Z"
+            targetBlank
+        />
+    </Land>}
