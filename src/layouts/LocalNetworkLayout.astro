@@ -8,17 +8,17 @@ const addr = Astro.request.headers.get('X-Forwarded-For')
 
 const ip = addr ?? nativeIp
 
-let isLocal = false;
+let isLocal = false
 
 if (ip.startsWith("10.") || ip.startsWith("127.") || ip.startsWith("192") || ip.startsWith("172")) {
-  isLocal = true;
+  isLocal = true
 }
 
-console.log("current ip:", ip, "native ip:", nativeIp, "forwarded ip:", addr, "isLocal:", isLocal);
+const canContinue = isLocal || import.meta.env.DEV
 
 ---
 
-{isLocal ? <slot /> : <Land>
+{canContinue ? <slot /> : <Land>
         <span slot="title">No accesible</span>
         <span slot="instructions">Solo se puede acceder desde una computadora de la escuela.</span>
         <Card
