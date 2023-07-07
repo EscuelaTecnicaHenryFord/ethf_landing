@@ -123,6 +123,7 @@ export default async function Home() {
 
         </div>
         {!session?.user && <SignInLarge />}
+        <div className='mt-5 w-full'></div>
       </main>
     </div>
   )
