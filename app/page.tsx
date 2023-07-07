@@ -26,6 +26,7 @@ export default async function Home() {
   }
 
   const isStudent = isAuthenticated && session?.user?.email?.endsWith('@henryford.edu.ar') && session?.user?.email?.match(/hf[0-9]{4,4}/)
+  const isStaff = isAuthenticated && !isStudent
 
   function renderCards(cards: CardProps[]) {
     return cards.map(card => <Card key={card.href} {...card} />)
@@ -118,11 +119,11 @@ export default async function Home() {
 
           {renderCards(publicGeneralCards)}
           {isAuthenticated && renderCards(generalCards)}
-          {!isStudent && renderCards(staffCards)}
+          {isStaff && renderCards(staffCards)}
 
 
         </div>
-        {!session?.user && <SignInLarge />}
+        {!isAuthenticated && <SignInLarge />}
         <div className='mt-5 w-full'></div>
       </main>
     </div>
