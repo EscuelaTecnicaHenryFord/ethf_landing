@@ -5,8 +5,7 @@ import SignInLarge from '@/components/SignInLarge'
 import { authOptions } from '@/pages/api/auth/[...nextauth]'
 import { GetServerSideProps } from 'next'
 import { getServerSession } from 'next-auth'
-import { headers } from 'next/dist/client/components/headers'
-import { NextRequest, NextResponse } from 'next/server'
+import { headers } from 'next/headers'
 
 export default async function Home() {
   const session = await getServerSession(authOptions)
