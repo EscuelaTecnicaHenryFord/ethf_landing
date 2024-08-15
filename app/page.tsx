@@ -68,7 +68,7 @@ export default async function Home() {
       picture: 'https://cms.henryford.edu.ar/uploads/rock_and_ford_ea9e52829c.png?updated_at=2023-03-17T17:09:00.932Z',
     },
     {
-      href: 'https://www.henryford.edu.ar/public/comedor/index.html?codigo=comedor481A',
+      href: 'https://queresto.com/FORD',
       title: 'Comedor',
       picture: 'https://cms.henryford.edu.ar/uploads/eurest_f1a4923059.jpg?updated_at=2023-03-17T17:04:51.979Z',
     },
