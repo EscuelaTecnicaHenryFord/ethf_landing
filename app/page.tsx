@@ -101,7 +101,7 @@ export default async function Home() {
       picture: 'https://cms.henryford.edu.ar/uploads/calendario_500eaeaafc.JPG?updated_at=2023-03-17T17:12:14.852Z',
     },
     {
-      href: 'https://sites.google.com/view/iaenethf',
+      href: 'https://ia.henryford.edu.ar',
       title: 'IA en ETHF',
       picture: 'https://cms.henryford.edu.ar/uploads/header_conversational_ai_chatbot_speech_bubble_e954a43bf3.png?updated_at=2025-02-13T11:49:49.078Z',
     }
