@@ -97,7 +97,7 @@ export default async function Home() {
     },
     {
       href: 'https://ethf-my.sharepoint.com/:x:/g/personal/sambrosoni_henryford_edu_ar/Ee6vnFmxKe9Bnsgmub31UpEBsia5ulnJVQG2RNGkN9TLIQ',
-      title: 'Calendario 2024',
+      title: 'Calendario 2025',
       picture: 'https://cms.henryford.edu.ar/uploads/calendario_500eaeaafc.JPG?updated_at=2023-03-17T17:12:14.852Z',
     },
     {
