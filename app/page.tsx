@@ -86,7 +86,7 @@ export default async function Home() {
       picture: 'https://cms.henryford.edu.ar/uploads/outlook_77808450fd.png?updated_at=2023-03-17T17:19:21.040Z'
     },
     {
-      href: 'https://pedidos.henryford.edu.ar/',
+      href: 'https://notebooks.henryford.edu.ar/',
       title: 'Notebooks',
       picture: 'https://cms.henryford.edu.ar/uploads/laptops_bdeb8ce3be.jpg?updated_at=2023-03-17T17:27:21.314Z',
     },
