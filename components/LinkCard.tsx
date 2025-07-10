@@ -2,6 +2,7 @@ import Image from "next/image";
 import css from "styled-jsx/css";
 
 export interface CardProps {
+    index?: number;
     title: string;
     href: string;
     picture?: string;
@@ -11,7 +12,7 @@ export interface CardProps {
 
 export default function Card({ title, href, picture, targetBlank }: CardProps) {
     return <a href={href} target="_blank" className="aspect-[14/9] relative block" style={{ backgroundColor: stringToColor(title) }}>
-        {picture && <Image src={picture} objectFit="cover" alt={title} fill={true}/>}
+        {picture && <Image src={picture} objectFit="cover" alt={title} fill={true} />}
         <div className="absolute bottom-0 left-0 right-0">
             <h2 className="text-sm sm:text-lg font-semibold text-white bg-opacity-40 bg-black block p-2">{title}</h2>
         </div>
