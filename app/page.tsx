@@ -72,11 +72,12 @@ export default async function Home() {
     //   href: 'https://docs.google.com/forms/d/e/1FAIpQLSfjc5X8vO1dccGA1Z35Z7tIXLMdyjJq4VujIw-lWo7AcBp4pg/viewform',
     //   picture: 'https://cms.henryford.edu.ar/uploads/rock_and_ford_ea9e52829c.png?updated_at=2023-03-17T17:09:00.932Z',
     // },
-    // {
-    //   href: 'https://queresto.com/FORD',
-    //   title: 'Comedor',
-    //   picture: 'https://cms.henryford.edu.ar/uploads/eurest_f1a4923059.jpg?updated_at=2023-03-17T17:04:51.979Z',
-    // },
+    {
+      index: 14,
+      href: 'https://queresto.com/FORD',
+      title: 'Comedor',
+      picture: 'https://cms.henryford.edu.ar/uploads/eurest_f1a4923059.jpg?updated_at=2023-03-17T17:04:51.979Z',
+    },
     {
       index: 5,
       href: 'https://public.henryford.edu.ar/public/Horario%202025%20por%20d%C3%ADa.pdf',
