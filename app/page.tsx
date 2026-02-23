@@ -107,7 +107,7 @@ export default async function Home() {
     },
     {
       index: 6,
-      href: 'https://comunicaciones.henryford.edu.ar',
+      href: 'https://console.henryford.edu.ar/comunicados',
       title: 'Cuaderno Comunicaciones',
       picture: 'https://cms.henryford.edu.ar/uploads/8244_0280abe380.jpg?updated_at=2023-05-02T23:37:33.742Z',
     },
