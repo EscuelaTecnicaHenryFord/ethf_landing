@@ -101,7 +101,7 @@ export default async function Home() {
     },
     {
       index: 9,
-      href: 'https://notebooks.henryford.edu.ar/',
+      href: 'https://console.henryford.edu.ar/equipos',
       title: 'Notebooks',
       picture: 'https://cms.henryford.edu.ar/uploads/laptops_bdeb8ce3be.jpg?updated_at=2023-03-17T17:27:21.314Z',
     },
