@@ -114,7 +114,7 @@ export default async function Home() {
     {
       index: 2,
       href: 'https://outlook.office365.com/owa/calendar/1eba682f7ddb4eaab023618923c630ce@henryford.edu.ar/ade78a5cd18b4b1ba15f184ade93c79e844426494135978207/calendar.html',
-      title: 'Calendario 2025',
+      title: 'Calendario 2026',
       picture: 'https://cms.henryford.edu.ar/uploads/calendario_500eaeaafc.JPG?updated_at=2023-03-17T17:12:14.852Z',
     },
     {
