@@ -80,7 +80,7 @@ export default async function Home() {
     },
     {
       index: 5,
-      href: 'https://public.henryford.edu.ar/public/Horario%202025%20por%20d%C3%ADa.pdf',
+      href: 'https://public.henryford.edu.ar/horario',
       title: 'Horario',
       picture: 'https://cms.henryford.edu.ar/uploads/calendar_planner_collection_templates_reminder_organizer_eventin_flat_style_calendar_notification_illustration_business_plan_schedule_stock_vector_eps_10_158224_284_3cf667a545.avif?updated_at=2023-03-31T12:50:37.594Z',
     }
