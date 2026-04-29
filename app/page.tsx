@@ -89,7 +89,7 @@ export default async function Home() {
   const staffCards: CardProps[] = [
     {
       index: 4,
-      href: 'https://rite.henryford.edu.ar/',
+      href: 'https://console.henryford.edu.ar/calificaciones/2026',
       title: 'RITE',
       picture: 'https://cms.henryford.edu.ar/uploads/rite_icon_61f2be7182.png?updated_at=2025-07-10T23:18:33.456Z'
     },
