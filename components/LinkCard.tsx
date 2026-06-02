@@ -1,5 +1,4 @@
 import Image from "next/image";
-import css from "styled-jsx/css";
 
 export interface CardProps {
     index?: number;
@@ -10,7 +9,7 @@ export interface CardProps {
 }
 
 
-export default function Card({ title, href, picture, targetBlank }: CardProps) {
+export default function Card({ title, href, picture }: CardProps) {
     return <a href={href} target="_blank" className="aspect-[14/9] relative block" style={{ backgroundColor: stringToColor(title) }}>
         {picture && <Image src={picture} objectFit="cover" alt={title} fill={true} />}
         <div className="absolute bottom-0 left-0 right-0">

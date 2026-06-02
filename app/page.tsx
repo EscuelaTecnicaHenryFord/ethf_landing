@@ -3,27 +3,12 @@ import InfoCard from '@/components/InfoCard'
 import Card, { CardProps } from '@/components/LinkCard'
 import SignInLarge from '@/components/SignInLarge'
 import { authOptions } from '@/pages/api/auth/[...nextauth]'
-import { GetServerSideProps } from 'next'
 import { getServerSession } from 'next-auth'
-import { headers } from 'next/headers'
 
 export default async function Home() {
   const session = await getServerSession(authOptions)
 
   const isAuthenticated = !!session?.user
-
-  const ip = headers().get('X-Forwarded-For') || '10.0.0.0'
-
-  let isLocal = false;
-  if (
-    ip.startsWith("::1") ||
-    ip.startsWith("10.") ||
-    ip.startsWith("127.") ||
-    ip.startsWith("192") ||
-    ip.startsWith("172")
-  ) {
-    isLocal = true;
-  }
 
   const isStudent = isAuthenticated && session?.user?.email?.endsWith('@henryford.edu.ar') && session?.user?.email?.match(/hf[0-9]{4,4}/)
   const isStaff = isAuthenticated && !isStudent

@@ -1,7 +1,6 @@
 import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import { getServerSession } from "next-auth"
 import AppbarLoginButton from "./AppbarLoginButton"
-import { signOut } from "next-auth/react"
 import AppbarSigonOutButton from "./AppbarSignOutButton"
 
 export default async function Appbar() {
